@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" content="#070913" />
+    <meta id="meta-description" name="description" content="" />
+    <meta id="meta-og-title" property="og:title" content="" />
+    <meta id="meta-og-description" property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta name="twitter:card" content="summary" />
+    <meta id="meta-twitter-title" name="twitter:title" content="" />
+    <meta id="meta-twitter-description" name="twitter:description" content="" />
+    <title></title>
+    <link rel="icon" href="assets/logo-la-misma-nota.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/logo-la-misma-nota.svg" as="image" type="image/svg+xml" fetchpriority="high" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site-config.js"></script>
+    <script id="music-group-schema" type="application/ld+json"></script>
+    <script id="faq-schema" type="application/ld+json"></script>
+    <script>
+      (() => {
+        const config = window.siteConfig;
+        if (!config) return;
+
+        const setMeta = (id, content) => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.setAttribute("content", content);
+          }
+        };
+
+        document.title = config.seo.title;
+        setMeta("meta-description", config.seo.description);
+        setMeta("meta-og-title", config.seo.ogTitle);
+        setMeta("meta-og-description", config.seo.ogDescription);
+        setMeta("meta-twitter-title", config.seo.twitterTitle);
+        setMeta("meta-twitter-description", config.seo.twitterDescription);
+
+        const musicGroupSchema = {
+          "@context": "https://schema.org",
+          "@type": "MusicGroup",
+          name: config.brand,
+          description: config.seo.musicGroupDescription,
+          genre: config.seo.genres,
+          telephone: config.contact.phone,
+          email: config.contact.email,
+          sameAs: [config.contact.instagram, config.contact.tiktok, config.contact.youtube],
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: config.contact.addressLocality,
+            addressRegion: config.contact.addressRegion,
+            addressCountry: config.contact.addressCountry,
+          },
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              contactType: "sales",
+              telephone: config.contact.phone,
+              email: config.contact.email,
+              availableLanguage: ["es"],
+              areaServed: "AR",
+            },
+          ],
+          areaServed: config.seo.areaServed,
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Paquetes para eventos",
+            itemListElement: config.seo.offerCatalog.map((item) => ({ "@type": "Offer", name: item })),
+          },
+        };
+
+        const faqSchema = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: config.faqSection.items.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        };
+
+        const musicGroupNode = document.getElementById("music-group-schema");
+        const faqNode = document.getElementById("faq-schema");
+
+        if (musicGroupNode) {
+          musicGroupNode.textContent = JSON.stringify(musicGroupSchema);
+        }
+
+        if (faqNode) {
+          faqNode.textContent = JSON.stringify(faqSchema);
+        }
+      })();
+    </script>
+    <script src="pricing.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient--cyan" aria-hidden="true"></div>
+    <div class="ambient ambient--violet" aria-hidden="true"></div>
+    <div class="ambient ambient--coral" aria-hidden="true"></div>
+
+    <a
+      id="floating-whatsapp-link"
+      class="floating-whatsapp"
+      href=""
+      data-whatsapp-link
+      aria-label=""
+    >
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path
+          d="M19.11 17.62c-.29-.15-1.73-.85-1.99-.95-.27-.1-.46-.15-.65.15-.2.29-.75.95-.93 1.14-.17.2-.35.22-.64.08-.29-.15-1.25-.46-2.37-1.47-.88-.79-1.47-1.76-1.64-2.05-.17-.29-.02-.45.12-.6.13-.13.29-.35.44-.52.15-.17.2-.29.29-.49.1-.19.05-.36-.02-.51-.08-.15-.65-1.57-.89-2.15-.24-.57-.48-.49-.65-.5h-.56c-.19 0-.51.07-.78.36-.27.29-1.03 1.01-1.03 2.46 0 1.45 1.05 2.85 1.2 3.05.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.61.71.22 1.36.19 1.88.12.57-.09 1.73-.71 1.98-1.39.24-.68.24-1.26.17-1.39-.07-.12-.26-.19-.56-.34Z"
+        />
+        <path
+          d="M16.02 3.2C8.94 3.2 3.2 8.86 3.2 15.86c0 2.25.6 4.45 1.74 6.39L3 29l6.95-1.82a12.9 12.9 0 0 0 6.07 1.52h.01c7.08 0 12.82-5.66 12.82-12.66 0-7-5.74-12.84-12.83-12.84Zm0 23.39h-.01a10.7 10.7 0 0 1-5.44-1.49l-.39-.23-4.13 1.08 1.1-4.02-.25-.41a10.42 10.42 0 0 1-1.61-5.56c0-5.78 4.79-10.47 10.73-10.47 2.87 0 5.56 1.1 7.58 3.08a10.3 10.3 0 0 1 3.13 7.4c0 5.77-4.79 10.47-10.71 10.47Z"
+        />
+      </svg>
+      <span id="floating-whatsapp-label"></span>
+    </a>
+
+    <header class="site-header">
+      <a class="brand-lockup" href="#inicio" aria-label="Volver al inicio">
+        <img
+          class="brand-mark"
+          src="assets/logo-la-misma-nota.svg"
+          alt="Logo de la banda"
+          width="54"
+          height="54"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <span class="brand-copy">
+          <span class="brand-name" data-brand-name></span>
+          <span class="brand-tag" id="header-brand-tag"></span>
+        </span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav-menu"
+        aria-label="Abrir navegación"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="site-nav-shell" id="site-nav-menu">
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="#inicio"></a>
+          <a href="#formatos"></a>
+          <a href="#paquetes"></a>
+          <a href="#videos"></a>
+          <a href="#testimonios"></a>
+          <a href="#faq"></a>
+          <a href="#consulta"></a>
+        </nav>
+
+        <a
+          id="header-reserve-button"
+          class="button button--ghost button--compact"
+          href=""
+          data-whatsapp-link
+        >
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="inicio">
+        <div class="hero-copy" data-reveal>
+          <span class="eyebrow" id="hero-eyebrow"></span>
+          <h1 id="hero-title"></h1>
+          <p class="lead" id="hero-lead"></p>
+
+          <div class="hero-actions">
+            <a
+              id="hero-primary-cta"
+              class="button"
+              href=""
+              data-whatsapp-link
+            ></a>
+            <a class="button button--ghost" id="hero-secondary-cta" href=""></a>
+          </div>
+
+          <div class="booking-pulse" id="hero-booking-pulse" aria-label="Beneficios principales"></div>
+
+          <div class="service-area-row" id="hero-service-areas" aria-label="Cobertura"></div>
+
+          <div class="stat-row" id="hero-stat-row"></div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <article class="poster-card">
+            <span class="poster-topline" id="poster-topline"></span>
+
+            <div class="poster-logo" aria-label="Logo de la banda">
+              <span class="poster-logo-top" id="poster-logo-top"></span>
+              <span class="poster-logo-bottom" id="poster-logo-bottom"></span>
+            </div>
+
+            <div class="poster-swoosh" aria-hidden="true"></div>
+            <div class="poster-swoosh poster-swoosh--alt" aria-hidden="true"></div>
+
+            <div class="poster-stage-meta" id="poster-stage-meta"></div>
+
+            <div class="poster-keys" aria-hidden="true"></div>
+
+            <div class="mini-panel">
+              <span class="poster-label">Formatos</span>
+              <div class="mini-panel-row" id="poster-mini-formats"></div>
+            </div>
+          </article>
+
+          <article class="hero-chip hero-chip--left">
+            <span class="hero-chip-label" id="hero-chip-left-label"></span>
+            <strong id="hero-chip-left-title"></strong>
+          </article>
+
+          <article class="hero-chip hero-chip--right">
+            <span class="hero-chip-label" id="hero-chip-right-label"></span>
+            <strong id="hero-chip-right-title"></strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--compact" data-reveal>
+        <div class="section-heading">
+          <span class="eyebrow" id="conversion-eyebrow"></span>
+          <h2 id="conversion-title"></h2>
+          <p class="lead" id="conversion-lead"></p>
+        </div>
+
+        <div class="value-grid" id="value-grid"></div>
+      </section>
+
+      <section class="section section--compact local-seo-section" data-reveal>
+        <div class="local-seo-card">
+          <div class="section-heading section-heading--compact">
+            <span class="eyebrow" id="local-seo-eyebrow"></span>
+            <h2 id="local-seo-title"></h2>
+            <p class="lead" id="local-seo-lead"></p>
+          </div>
+
+          <div class="local-grid" id="local-grid"></div>
+
+          <div class="local-chip-row" id="local-chip-row"></div>
+        </div>
+      </section>
+
+      <section class="section" id="formatos" data-reveal>
+        <div class="section-heading">
+          <span class="eyebrow" id="formats-eyebrow"></span>
+          <h2 id="formats-title"></h2>
+          <p class="lead" id="formats-lead"></p>
+        </div>
+
+        <div class="formats-grid" id="formats-grid"></div>
+      </section>
+
+      <section class="section packages-section" id="paquetes" data-reveal>
+        <div class="section-heading">
+          <span class="eyebrow" id="packages-eyebrow"></span>
+          <h2 id="packages-title"></h2>
+          <p class="lead" id="packages-lead"></p>
+        </div>
+
+        <div class="package-grid" id="package-grid"></div>
+
+        <div class="packages-close">
+          <p id="packages-close-copy"></p>
+          <a class="button" id="packages-close-button" href="" data-whatsapp-link></a>
+        </div>
+      </section>
+
+      <section class="section" id="videos" data-reveal>
+        <div class="section-heading">
+          <span class="eyebrow" id="videos-eyebrow"></span>
+          <h2 id="videos-title"></h2>
+          <p class="lead" id="videos-lead"></p>
+        </div>
+
+        <div class="video-layout" id="video-layout"></div>
+      </section>
+
+      <section class="section" data-reveal>
+        <div class="section-heading">
+          <span class="eyebrow" id="process-eyebrow"></span>
+          <h2 id="process-title"></h2>
+          <p class="lead" id="process-lead"></p>
+        </div>
+
+        <div class="process-grid" id="process-grid"></div>
+      </section>
+
+      <section class="section" id="testimonios" data-reveal>
+        <div class="section-heading">
+          <span class="eyebrow" id="testimonials-eyebrow"></span>
+          <h2 id="testimonials-title"></h2>
+        </div>
+
+        <div class="testimonial-grid" id="testimonial-grid"></div>
+      </section>
+
+      <section class="section faq-section" id="faq" data-reveal>
+        <div class="faq-intro">
+          <span class="eyebrow" id="faq-eyebrow"></span>
+          <h2 id="faq-title"></h2>
+          <p class="lead" id="faq-lead"></p>
+        </div>
+
+        <div class="faq-list" id="faq-list"></div>
+      </section>
+
+      <section class="section contact-section" id="consulta" data-reveal>
+        <article class="contact-panel contact-panel--info">
+          <span class="eyebrow" id="contact-eyebrow"></span>
+          <h2 id="contact-title"></h2>
+          <p class="lead" id="contact-lead"></p>
+
+          <div class="contact-points" id="contact-points"></div>
+
+          <div class="checklist-panel">
+            <span class="poster-label" id="contact-checklist-title"></span>
+            <div class="mini-panel-row" id="contact-checklist-row"></div>
+          </div>
+        </article>
+
+        <article class="contact-panel contact-panel--form">
+          <form
+            id="quote-form"
+            name="consulta-evento"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            novalidate
+          >
+            <input type="hidden" name="form-name" value="consulta-evento" />
+            <p hidden>
+              <label>No completar <input name="bot-field" /></label>
+            </p>
+            <input type="hidden" name="origen" value="cotizador-web" />
+            <input type="hidden" name="lead_id" value="" />
+            <input type="hidden" name="estado_lead" value="nuevo" />
+            <input type="hidden" name="presupuesto_estimado" value="" />
+            <input type="hidden" name="subtotal_estimado" value="" />
+            <input type="hidden" name="descuento_total" value="" />
+            <input type="hidden" name="sena_requerida" value="" />
+            <input type="hidden" name="saldo_pendiente" value="" />
+            <input type="hidden" name="desglose_presupuesto" value="" />
+            <div class="form-grid">
+              <label>
+                Nombre
+                <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
+              </label>
+
+              <label>
+                WhatsApp
+                <input
+                  type="tel"
+                  name="telefono"
+                  placeholder="+54 9 11..."
+                  autocomplete="tel"
+                  inputmode="tel"
+                  required
+                />
+              </label>
+
+              <label>
+                Cantidad de personas
+                <input
+                  type="number"
+                  name="personas"
+                  placeholder="120"
+                  min="1"
+                  inputmode="numeric"
+                  required
+                />
+              </label>
+
+              <label>
+                Fecha estimada
+                <input type="date" name="fecha" required />
+              </label>
+
+              <label>
+                Zona
+                <select name="zona" required>
+                  <option value="">Seleccioná una zona</option>
+                  <option value="CABA">CABA</option>
+                  <option value="Zona Norte">Zona Norte</option>
+                  <option value="Zona Oeste">Zona Oeste</option>
+                  <option value="Zona Sur">Zona Sur</option>
+                  <option value="La Plata">La Plata</option>
+                  <option value="Interior de Buenos Aires">Interior de Buenos Aires</option>
+                  <option value="Interior de Argentina">Interior de Argentina</option>
+                </select>
+              </label>
+
+              <label>
+                Tipo de evento
+                <select name="evento" required>
+                  <option value="">Seleccioná una opción</option>
+                  <option value="Show en vivo">Show en vivo / otro evento</option>
+                  <option value="Casamiento">Casamiento</option>
+                  <option value="Cumpleaños">Cumpleaños</option>
+                  <option value="Evento privado">Evento privado</option>
+                  <option value="Evento corporativo">Evento corporativo</option>
+                </select>
+              </label>
+
+              <label>
+                Duración
+                <select name="duracion" required>
+                  <option value="">Seleccioná duración</option>
+                  <option value="45">45 minutos</option>
+                  <option value="60">60 minutos</option>
+                  <option value="75">75 minutos</option>
+                  <option value="90">90 minutos</option>
+                  <option value="105">105 minutos</option>
+                  <option value="120">120 minutos</option>
+                </select>
+              </label>
+
+              <label>
+                Cantidad de músicos
+                <select name="musicos" required>
+                  <option value="">Seleccioná cantidad</option>
+                  <option value="2">2 músicos | voz/teclado + percusión | promo hasta 80 personas</option>
+                  <option value="3">3 músicos</option>
+                  <option value="4">4 músicos</option>
+                  <option value="5">5 músicos</option>
+                  <option value="6">6 músicos</option>
+                  <option value="7">7 músicos</option>
+                  <option value="8">8 músicos</option>
+                </select>
+              </label>
+
+              <label>
+                Sonido
+                <select name="sonido" required>
+                  <option value="">Seleccioná una opción</option>
+                  <option value="venue">Lo resuelve el venue</option>
+                  <option value="basico">Sonido base</option>
+                  <option value="full">Sonido full grande</option>
+                </select>
+              </label>
+
+              <label class="checkbox-field">
+                <span>Traslado</span>
+                <span class="checkbox-pill">
+                  <input type="checkbox" name="traslado" value="si" />
+                  <span>Cotizar traslado según zona</span>
+                </span>
+              </label>
+
+              <label>
+                Descuento manual (%)
+                <input
+                  type="number"
+                  name="descuento_porcentaje"
+                  placeholder="10"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  inputmode="decimal"
+                />
+              </label>
+
+              <label>
+                Descuento manual ($)
+                <input
+                  type="number"
+                  name="descuento_fijo"
+                  placeholder="50000"
+                  min="0"
+                  step="1000"
+                  inputmode="numeric"
+                />
+              </label>
+
+              <label class="label-full">
+                Contanos un poco más
+                <textarea
+                  name="mensaje"
+                  rows="5"
+                  placeholder="Horario, venue, estilo del evento o cualquier dato útil para afinar la propuesta."
+                ></textarea>
+              </label>
+            </div>
+
+            <p class="form-note" id="contact-promo-note"></p>
+
+            <div class="quote-form-actions">
+              <div class="quote-action-grid">
+                <button class="button button--full" id="quote-submit-button" type="submit"></button>
+                <button class="button button--ghost button--full" id="load-example" type="button"></button>
+              </div>
+              <p class="form-note" id="form-status"></p>
+            </div>
+          </form>
+
+          <section class="quote-result" id="quote-result" hidden aria-live="polite">
+            <div class="quote-result-head">
+              <span class="quote-badge" id="quote-badge-label"></span>
+              <strong id="quote-total">AR$ 0</strong>
+            </div>
+            <p class="quote-result-copy" id="quote-summary"></p>
+            <div class="quote-meta" id="quote-meta"></div>
+            <ul class="quote-breakdown" id="quote-breakdown"></ul>
+            <div class="quote-finance">
+              <article>
+                <span id="quote-subtotal-label"></span>
+                <strong id="quote-subtotal">AR$ 0</strong>
+              </article>
+              <article>
+                <span id="quote-discount-label"></span>
+                <strong id="quote-discount">AR$ 0</strong>
+              </article>
+              <article>
+                <span id="quote-deposit-label"></span>
+                <strong id="quote-deposit">AR$ 0</strong>
+              </article>
+              <article>
+                <span id="quote-balance-label"></span>
+                <strong id="quote-balance">AR$ 0</strong>
+              </article>
+            </div>
+            <div class="quote-result-actions">
+              <a class="button button--full" id="quote-whatsapp" href="#consulta"></a>
+              <p class="quote-result-note" id="quote-result-note"></p>
+            </div>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="brand-lockup brand-lockup--footer" href="#inicio" aria-label="Volver al inicio">
+          <img
+            class="brand-mark brand-mark--footer"
+            src="assets/logo-la-misma-nota.svg"
+            alt="Logo de la banda"
+            width="50"
+            height="50"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="brand-copy">
+            <strong class="brand-name" data-brand-name></strong>
+            <span class="brand-tag" id="footer-brand-tag"></span>
+          </span>
+        </a>
+        <p id="footer-description"></p>
+        <div class="footer-links">
+          <a class="inline-link" id="footer-admin-link" href="admin.html"></a>
+        </div>
+      </div>
+
+      <a class="button button--ghost button--compact" id="footer-cta-button" href="" data-whatsapp-link></a>
+    </footer>
+  </body>
+</html>

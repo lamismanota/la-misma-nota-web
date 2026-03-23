@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#0b1020" />
+    <title></title>
+    <link rel="icon" href="assets/logo-la-misma-nota.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="admin.css" />
+    <script src="site-config.js"></script>
+    <script src="pricing.js" defer></script>
+    <script src="admin.js" defer></script>
+  </head>
+  <body class="admin-page">
+    <div class="admin-shell">
+      <header class="admin-header">
+        <a class="admin-brand" href="index.html" aria-label="Volver a la landing">
+          <img
+            src="assets/logo-la-misma-nota.svg"
+            alt="Logo de la banda"
+            width="52"
+            height="52"
+            decoding="async"
+          />
+          <span>
+            <strong id="admin-brand-name"></strong>
+            <span id="admin-brand-subtitle"></span>
+          </span>
+        </a>
+
+        <div class="admin-header-actions">
+          <a class="admin-button admin-button--ghost" id="admin-header-button" href="index.html"></a>
+        </div>
+      </header>
+
+      <main class="admin-main">
+        <section class="admin-hero">
+          <div>
+            <span class="admin-kicker" id="admin-hero-kicker"></span>
+            <h1 id="admin-hero-title"></h1>
+            <p id="admin-hero-lead"></p>
+          </div>
+
+          <div class="summary-grid" id="summary-grid">
+            <article class="summary-card">
+              <span>Total</span>
+              <strong id="summary-total">0</strong>
+            </article>
+            <article class="summary-card">
+              <span>Nuevos</span>
+              <strong id="summary-new">0</strong>
+            </article>
+            <article class="summary-card">
+              <span>Reservados</span>
+              <strong id="summary-booked">0</strong>
+            </article>
+            <article class="summary-card">
+              <span>Presupuesto total</span>
+              <strong id="summary-budget">$0</strong>
+            </article>
+          </div>
+        </section>
+
+        <section class="admin-controls">
+          <label>
+            <span id="admin-filter-label"></span>
+            <select id="status-filter">
+              <option value="todos">Todos</option>
+              <option value="nuevo">Nuevo</option>
+              <option value="contactado">Contactado</option>
+              <option value="reservado">Reservado</option>
+              <option value="perdido">Perdido</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="lead-section">
+          <div class="empty-state" id="empty-state" hidden>
+            <h2 id="admin-empty-title"></h2>
+            <p id="admin-empty-text"></p>
+          </div>
+
+          <div class="lead-list" id="lead-list"></div>
+        </section>
+
+        <section class="scenario-section">
+          <div class="scenario-section-head">
+            <span class="admin-kicker" id="admin-scenarios-kicker"></span>
+            <h2 id="admin-scenarios-title"></h2>
+            <p id="admin-scenarios-lead"></p>
+          </div>
+
+          <div class="scenario-list" id="scenario-list"></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
