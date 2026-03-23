@@ -110,7 +110,7 @@ const siteConfig = {
     miniFormats: ["Casamientos", "Fiestas privadas", "Corporativos"],
     chips: [
       { label: "Entrada fina", title: "Imagen escénica prolija" },
-      { label: "Cierre comercial", title: "Botones y formulario listos para reservar" },
+      { label: "Reserva directa", title: "Presupuesto y fecha por WhatsApp" },
     ],
   },
   conversionSection: {
@@ -159,16 +159,15 @@ const siteConfig = {
   },
   formatsSection: {
     eyebrow: "Formatos",
-    title: "Formatos claros para eventos en Buenos Aires y Argentina, pensados para reservar rápido.",
-    lead:
-      "Cada formato está escrito para vender mejor: muestra el tipo de evento, el tono del show y el motivo por el que conviene consultar por WhatsApp en ese momento, ya sea en CABA, GBA o una fecha puntual en Argentina.",
+    title: "Formatos para casamientos, fiestas privadas y eventos corporativos.",
+    lead: "Elegí el formato que mejor encaja con tu evento y pedí propuesta por WhatsApp.",
     cards: [
       {
         featured: true,
         tag: "Casamientos",
         title: "Boda premium",
         description:
-          "Entrada elegante, bloque central bien arriba y cierre pensado para dejar una pista memorable sin perder prolijidad en la coordinación.",
+          "Ideal para bodas que necesitan una entrada elegante, una pista encendida y coordinación prolija con el salón o DJ.",
         items: [
           "Ideal para salones, quintas y estancias.",
           "Coordinación con DJ, planner o técnica del venue.",
@@ -185,7 +184,7 @@ const siteConfig = {
         tag: "Fiestas privadas",
         title: "Noche arriba",
         description:
-          "Cumpleaños, aniversarios y celebraciones donde la banda necesita entrar rápido en clima y sostener energía real sin sobreactuar.",
+          "Un show pensado para cumpleaños, aniversarios y celebraciones donde la energía tiene que subir rápido y sostenerse toda la noche.",
         items: [
           "Setlist popular y coreable.",
           "Escala bien en espacios chicos o medianos.",
@@ -202,7 +201,7 @@ const siteConfig = {
         tag: "Corporativos",
         title: "Marca y after",
         description:
-          "Formato adaptable para lanzamientos, after office y cierres de evento donde importa tanto la estética como la lectura del público.",
+          "Formato adaptable para lanzamientos, after office y cierres de evento donde importan tanto la imagen como la lectura del público.",
         items: [
           "Timing preciso y operación ordenada.",
           "Versión full band o set boutique.",
@@ -218,9 +217,8 @@ const siteConfig = {
   },
   packagesSection: {
     eyebrow: "Paquetes",
-    title: "Cuatro paquetes para vender mejor shows en Buenos Aires y convertir la consulta en reserva.",
-    lead:
-      "Esta sección baja la decisión a opciones concretas. Cada paquete comunica valor, contexto de uso y un siguiente paso claro para que el cliente de CABA, GBA o interior no se quede comparando eternamente.",
+    title: "Paquetes para resolver tu evento con una propuesta clara.",
+    lead: "Cada opción está pensada para que sepas rápido cuál conviene según tu evento y tu presupuesto.",
     cards: [
       {
         featured: false,
@@ -233,7 +231,7 @@ const siteConfig = {
           "Ideal para salones, quintas, terrazas y eventos sociales.",
           "Perfecto para clientes que quieren decidir rápido y resolver bien.",
         ],
-        closing: "Si ya tenés fecha, este paquete se cotiza rápido y se vende muy bien por WhatsApp.",
+        closing: "Si ya tenés fecha, te pasamos propuesta y disponibilidad por WhatsApp.",
         cta: {
           label: "Cotizar cumpleaños",
           href: "#consulta",
@@ -251,7 +249,7 @@ const siteConfig = {
           "Coordinación con planner, DJ y técnica del venue.",
           "El paquete más fácil de defender cuando el evento exige nivel.",
         ],
-        closing: "Es el formato que mejor convierte cuando el cliente quiere show, imagen y seguridad.",
+        closing: "Ideal para parejas que quieren seguridad, presencia y una pista bien arriba.",
         cta: {
           label: "Reservar casamiento",
           href: "#consulta",
@@ -269,7 +267,7 @@ const siteConfig = {
           "Presencia escénica prolija y repertorio de alta rotación.",
           "Muy vendible para clientes exigentes que priorizan experiencia.",
         ],
-        closing: "Una propuesta pensada para cerrar con clientes que no quieren improvisación.",
+        closing: "Una opción sólida para eventos donde cada detalle importa.",
         cta: {
           label: "Pedir propuesta privada",
           href: "#consulta",
@@ -287,7 +285,7 @@ const siteConfig = {
           "Sonido base incluido para resolver rápido sin sumar extras.",
           "Precio promo de AR$ 450.000 para eventos de hasta 80 personas.",
         ],
-        closing: "Es la oferta ideal para cerrar consultas rápidas con presupuesto más contenido.",
+        closing: "Perfecta para eventos chicos que buscan música en vivo sin sumar estructura de más.",
         cta: {
           label: "Quiero la promo",
           href: "#consulta",
@@ -296,8 +294,7 @@ const siteConfig = {
         },
       },
     ],
-    closeCopy:
-      "Si ya tenés fecha, salón o una idea clara del evento, este es el mejor momento para avanzar. Cuanto antes llegue la consulta con contexto, más fácil es convertirla en propuesta y reserva.",
+    closeCopy: "Si ya tenés fecha, zona o salón, escribinos y te pasamos una propuesta clara.",
     closeCta: {
       label: "Quiero cerrar una propuesta",
       href: "#consulta",
@@ -306,9 +303,8 @@ const siteConfig = {
   },
   videosSection: {
     eyebrow: "Videos",
-    title: "Videos de shows en Buenos Aires para vender con reels, cierres en vivo y prueba inmediata.",
-    lead:
-      "En vez de depender de galerías pesadas, los videos se presentan como piezas rápidas con estética editorial y CTA directo para pedir el reel completo por WhatsApp, especialmente desde celular.",
+    title: "Mirá cómo suena y se vive La Misma Nota en eventos reales.",
+    lead: "Reels de casamientos, fiestas privadas y eventos corporativos para que veas el clima del show.",
     featured: {
       posterClass: "video-poster--wedding",
       tag: "Casamientos",
@@ -317,7 +313,7 @@ const siteConfig = {
       playMessage: "Hola La Misma Nota, quiero ver el reel de casamientos.",
       title: "Entrada fina y pista explotando",
       description:
-        "Un reel pensado para vender bodas y fiestas premium mostrando presencia, luces y el momento exacto donde la pista se enciende.",
+        "Una muestra de bodas y fiestas premium con entrada prolija, presencia escénica y pista encendida.",
       meta: ["Bodas", "Alta energía", "Estética premium"],
       cta: {
         label: "Recibir reel",
@@ -333,7 +329,7 @@ const siteConfig = {
         playLabel: "Pedir video de fiestas privadas",
         playMessage: "Hola La Misma Nota, quiero ver el reel de fiestas privadas.",
         title: "Clásicos coreables y cierre arriba",
-        description: "Una pieza ideal para mostrar cómo la banda levanta cumpleaños y eventos sociales.",
+        description: "Una muestra de cómo la banda levanta cumpleaños y eventos sociales.",
         meta: ["Coreable", "Setlist flexible"],
       },
       {
@@ -343,17 +339,15 @@ const siteConfig = {
         playLabel: "Pedir video corporativo",
         playMessage: "Hola La Misma Nota, quiero ver el reel corporativo.",
         title: "Formato adaptable para marcas",
-        description: "Prueba visual de timing preciso, estética cuidada y lectura de público mixto.",
+        description: "Un ejemplo de timing preciso, estética cuidada y lectura de público mixto.",
         meta: ["After office", "Marca"],
       },
     ],
   },
   processSection: {
     eyebrow: "Reserva",
-    title:
-      "Un recorrido corto para convertir visitas en consultas reales desde Buenos Aires o cualquier punto de Argentina.",
-    lead:
-      "La estructura comercial es simple: mostrar el valor, despejar dudas y cerrar con un formulario que ya prepara el mensaje para WhatsApp.",
+    title: "Cómo reservar",
+    lead: "Mandanos fecha, lugar y tipo de evento. Te respondemos con disponibilidad, formato sugerido y presupuesto.",
     steps: [
       {
         index: "01",
@@ -398,9 +392,8 @@ const siteConfig = {
   },
   faqSection: {
     eyebrow: "Preguntas frecuentes",
-    title: "Las objeciones típicas ya están resueltas para cerrar consultas en CABA, GBA y Argentina.",
-    lead:
-      "Este bloque acompaña la decisión con respuestas cortas, útiles y orientadas a cerrar la reserva, especialmente en celular.",
+    title: "Respuestas rápidas antes de reservar.",
+    lead: "Lo más consultado antes de cerrar una fecha.",
     items: [
       {
         question: "¿Qué tipo de eventos cubre La Misma Nota en Buenos Aires y Argentina?",
@@ -433,21 +426,21 @@ const siteConfig = {
   },
   contactSection: {
     eyebrow: "Cotizador",
-    title: "Calculá un presupuesto estimado para tu evento y dejá lista la consulta comercial.",
+    title: "Pedí tu presupuesto",
     lead:
-      "Cargá fecha, zona, tipo de evento, duración, cantidad de músicos y extras. Vas a ver un valor estimado al instante y un botón para mandar todo por WhatsApp sin escribir de más.",
+      "Completá los datos del evento y recibí un valor estimado al instante. Después podés enviar la consulta por WhatsApp con todo listo.",
     points: [
       {
-        title: "Presupuesto orientativo",
-        text: "El cálculo te da una referencia rápida para avanzar con una propuesta comercial real.",
+        title: "Presupuesto estimado",
+        text: "Vas a ver un valor de referencia para tu evento en el momento.",
       },
       {
-        title: "WhatsApp listo",
-        text: "La consulta sale con todos los datos del evento ya cargados para acelerar la respuesta.",
+        title: "Consulta completa",
+        text: "El mensaje sale con los datos del evento ya cargados para no perder tiempo.",
       },
       {
-        title: "Panel de leads",
-        text: "Cada cotización queda guardada en el panel de consultas para seguimiento comercial.",
+        title: "Respuesta rápida",
+        text: "Con fecha, zona y tipo de evento podemos avanzar más rápido con la propuesta.",
       },
     ],
     alternateContactTitle: "Contacto alternativo",
@@ -458,25 +451,24 @@ const siteConfig = {
     formActions: {
       submitLabel: "Calcular presupuesto",
       exampleLabel: "Cargar ejemplo",
-      statusIdle:
-        "El cálculo es estimado y sirve para orientar la propuesta comercial antes de cerrar la fecha.",
+      statusIdle: "El valor es estimado y sirve como primera referencia.",
     },
     result: {
       badge: "Presupuesto estimado",
-      emptyCopy: "Completá el cotizador para ver un estimado y generar la consulta comercial.",
+      emptyCopy: "Completá el cotizador para ver el presupuesto estimado.",
       subtotalLabel: "Subtotal",
       discountLabel: "Descuento aplicado",
       depositLabel: "Seña requerida (30%)",
       balanceLabel: "Saldo pendiente",
       whatsappLabel: "Enviar consulta por WhatsApp",
-      note: "La consulta también queda guardada en el panel para seguimiento del lead.",
+      note: "Después de enviar la consulta por WhatsApp te respondemos con disponibilidad y propuesta.",
     },
   },
   footer: {
     brandTag: "Banda de cumbia premium para eventos en Buenos Aires y Argentina",
     description:
       "Show de cumbia en vivo para casamientos, cumpleaños, eventos privados y corporativos en Buenos Aires y Argentina.",
-    adminLabel: "Panel de consultas",
+    adminLabel: "",
   },
   admin: {
     pageTitle: "Panel de Consultas | La Misma Nota",
