@@ -475,7 +475,7 @@ const siteConfig = {
   footer: {
     brandTag: "Banda de cumbia premium para eventos en Buenos Aires y Argentina",
     description:
-      "Landing responsive, liviana y orientada a reservas locales. Hero visual fuerte, cobertura Buenos Aires / Argentina, videos, testimonios, FAQ, cotizador y CTA flotante de WhatsApp.",
+      "Show de cumbia en vivo para casamientos, cumpleaños, eventos privados y corporativos en Buenos Aires y Argentina.",
     adminLabel: "Panel de consultas",
   },
   admin: {
