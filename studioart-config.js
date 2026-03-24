@@ -1,9 +1,9 @@
 const studioArtConfig = {
   brand: "TNG Music StudioART",
   tagline: "Produccion musical, canciones a medida y audio para marcas",
-  homeHref: "index.html",
+  homeHref: "/",
   logo: {
-    src: "assets/tng-logo-master-2048.png?v=20260324-5",
+    src: "/assets/tng-logo-master-2048.png?v=20260324-6",
     alt: "Logo neon de TNG Music StudioART",
   },
   contact: {
@@ -48,7 +48,7 @@ const studioArtConfig = {
   buttons: {
     headerHome: {
       label: "Volver al sitio",
-      href: "index.html",
+      href: "/",
     },
     headerCta: {
       label: "Pedir propuesta",
@@ -81,7 +81,7 @@ const studioArtConfig = {
     },
     closingSecondary: {
       label: "Volver a La Misma Nota",
-      href: "index.html",
+      href: "/",
     },
     footerWhatsapp: {
       label: "WhatsApp",

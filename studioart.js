@@ -2,7 +2,7 @@ document.documentElement.classList.add("js");
 
 const STUDIO_CONFIG = window.studioArtConfig || {
   brand: "TNG Music StudioART",
-  homeHref: "index.html",
+  homeHref: "/",
   contact: {
     whatsapp: "",
   },
@@ -409,7 +409,7 @@ const applyContent = () => {
 
   setText("#footer-copy", STUDIO_CONFIG.footer?.copy);
   setText("#footer-home-link", STUDIO_CONFIG.footer?.homeLabel);
-  document.querySelector("#footer-home-link")?.setAttribute("href", STUDIO_CONFIG.homeHref || "index.html");
+  document.querySelector("#footer-home-link")?.setAttribute("href", STUDIO_CONFIG.homeHref || "/");
   applyCta("#footer-whatsapp-link", STUDIO_CONFIG.buttons?.footerWhatsapp);
   renderSocialLinks("#footer-social-links", STUDIO_CONFIG.contact?.socials || [], "footer-social-link");
 };
