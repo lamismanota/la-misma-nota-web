@@ -17,6 +17,7 @@ STATIC_FILES = [
     "script.js",
     "admin.js",
     "site-config.js",
+    "muestra-minimal.html",
 ]
 
 
