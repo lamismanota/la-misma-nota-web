@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muestra minimal | La Misma Nota</title>
+    <link rel="icon" href="assets/logo-la-misma-nota.svg" type="image/svg+xml" />
+    <script src="site-config.js"></script>
+    <style>
+      :root {
+        --bg: #05070f;
+        --panel: rgba(10, 15, 28, 0.78);
+        --panel-strong: rgba(12, 18, 34, 0.92);
+        --line: rgba(133, 238, 255, 0.18);
+        --text: #f8fbff;
+        --muted: #b4bfd5;
+        --cyan: #7df9ff;
+        --blue: #47b8ff;
+        --coral: #ff7d8d;
+        --gold: #ffd46a;
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(71, 184, 255, 0.18), transparent 32%),
+          radial-gradient(circle at top right, rgba(255, 125, 141, 0.18), transparent 30%),
+          linear-gradient(180deg, #070912 0%, #04050a 100%);
+      }
+
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        inset: auto;
+        width: 24rem;
+        height: 24rem;
+        border-radius: 999px;
+        filter: blur(90px);
+        opacity: 0.24;
+        pointer-events: none;
+      }
+
+      body::before {
+        top: -8rem;
+        left: -7rem;
+        background: var(--blue);
+      }
+
+      body::after {
+        right: -9rem;
+        bottom: -8rem;
+        background: var(--coral);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(1120px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 1.25rem 0 4rem;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.85rem 1rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(6, 10, 20, 0.78);
+        backdrop-filter: blur(20px);
+        position: sticky;
+        top: 0.75rem;
+        z-index: 10;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        min-width: 0;
+      }
+
+      .brand img {
+        width: 2.9rem;
+        height: 2.9rem;
+        border-radius: 0.9rem;
+        background: rgba(255, 255, 255, 0.04);
+        padding: 0.25rem;
+      }
+
+      .brand strong,
+      .brand span {
+        display: block;
+        white-space: nowrap;
+      }
+
+      .brand span {
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+
+      .topbar .button {
+        min-width: max-content;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.8fr);
+        gap: 1.35rem;
+        align-items: stretch;
+        padding-top: 2rem;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 1.9rem;
+        background: var(--panel);
+        backdrop-filter: blur(20px);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-copy {
+        padding: clamp(1.6rem, 4vw, 3.2rem);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(125, 249, 255, 0.09);
+        color: var(--cyan);
+        font-size: 0.84rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        margin-top: 1.2rem;
+        font-size: clamp(2.5rem, 5vw, 4.85rem);
+        line-height: 0.93;
+        max-width: 11ch;
+      }
+
+      h1 span {
+        display: block;
+        background: linear-gradient(135deg, var(--cyan), var(--gold), var(--coral));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero-copy p {
+        margin-top: 1.25rem;
+        max-width: 40rem;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.65;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 1.6rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.95rem 1.25rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+        transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button-primary {
+        color: #07101d;
+        background: linear-gradient(135deg, var(--cyan), #8ad1ff);
+      }
+
+      .button-secondary {
+        border-color: rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .hero-side {
+        padding: 1.2rem;
+        display: grid;
+        gap: 1rem;
+      }
+
+      .poster {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.4rem;
+        background:
+          linear-gradient(145deg, rgba(12, 18, 34, 0.96), rgba(7, 11, 19, 0.9)),
+          radial-gradient(circle at top left, rgba(71, 184, 255, 0.28), transparent 38%),
+          radial-gradient(circle at bottom right, rgba(255, 125, 141, 0.25), transparent 42%);
+      }
+
+      .poster strong {
+        font-size: clamp(2.2rem, 4vw, 3.8rem);
+        line-height: 0.92;
+      }
+
+      .poster strong span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.8em;
+      }
+
+      .mini-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+      }
+
+      .mini-list span,
+      .stat span {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .section {
+        margin-top: 1.25rem;
+        padding: clamp(1.5rem, 3vw, 2.2rem);
+      }
+
+      .section-head {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        margin-bottom: 1.3rem;
+      }
+
+      .section-head h2 {
+        font-size: clamp(1.7rem, 3vw, 2.6rem);
+      }
+
+      .section-head p {
+        color: var(--muted);
+        max-width: 46rem;
+        line-height: 1.6;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .offer,
+      .stat {
+        padding: 1.25rem;
+        border-radius: 1.4rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--panel-strong);
+      }
+
+      .offer h3,
+      .stat strong {
+        font-size: 1.2rem;
+        margin-bottom: 0.65rem;
+      }
+
+      .offer p,
+      .stat p {
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .video-shell {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 1rem;
+      }
+
+      .video-frame {
+        min-height: 17rem;
+        border-radius: 1.45rem;
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background:
+          linear-gradient(180deg, rgba(6, 10, 18, 0.1), rgba(6, 10, 18, 0.86)),
+          radial-gradient(circle at top center, rgba(125, 249, 255, 0.2), transparent 42%),
+          url("assets/logo-la-misma-nota.svg") center/9rem no-repeat,
+          #0b1222;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .video-frame span {
+        color: var(--cyan);
+        font-size: 0.84rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .video-frame strong {
+        margin-top: 0.55rem;
+        font-size: 1.6rem;
+      }
+
+      .video-frame p,
+      .quote-box p {
+        margin-top: 0.65rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .quote-box {
+        padding: 1.4rem;
+        border-radius: 1.45rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--panel-strong);
+      }
+
+      .quote-box strong {
+        font-size: 1.2rem;
+      }
+
+      .cta-band {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1.25rem;
+        padding: 1.2rem 1.4rem;
+        border-radius: 1.5rem;
+        background: linear-gradient(135deg, rgba(125, 249, 255, 0.12), rgba(255, 125, 141, 0.12));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .cta-band p {
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      @media (max-width: 920px) {
+        .hero,
+        .video-shell,
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-band {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          width: min(100% - 1rem, 36rem);
+        }
+
+        .topbar {
+          border-radius: 1.1rem;
+          padding: 0.8rem;
+        }
+
+        .brand span {
+          white-space: normal;
+        }
+
+        h1 {
+          max-width: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="brand" href="#">
+          <img src="assets/logo-la-misma-nota.svg" alt="Logo de la banda" />
+          <span>
+            <strong data-brand-name>La Misma Nota</strong>
+            <span>Cumbia premium para eventos</span>
+          </span>
+        </a>
+
+        <a class="button button-secondary" data-whatsapp-link href="#">Ver propuesta</a>
+      </header>
+
+      <section class="hero">
+        <article class="card hero-copy">
+          <span class="eyebrow">Muestra alternativa</span>
+          <h1>
+            Cumbia en vivo
+            <span>más simple, más fuerte</span>
+          </h1>
+          <p>
+            Esta muestra prueba una versión más limpia de la landing: menos texto, más foco en el show,
+            la prueba visual y la consulta directa por WhatsApp.
+          </p>
+
+          <div class="actions">
+            <a class="button button-primary" data-whatsapp-link href="#">Consultar fecha</a>
+            <a class="button button-secondary" href="#muestra-video">Ver muestra</a>
+          </div>
+        </article>
+
+        <aside class="card hero-side">
+          <div class="poster card">
+            <div class="mini-list">
+              <span>Casamientos</span>
+              <span>Fiestas privadas</span>
+              <span>Corporativos</span>
+            </div>
+            <strong>
+              <span data-brand-name>La Misma Nota</span>
+              pista encendida
+            </strong>
+            <div class="mini-list">
+              <span>45 a 120 min</span>
+              <span>Buenos Aires</span>
+              <span>WhatsApp directo</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card section">
+        <div class="section-head">
+          <span class="eyebrow">Tres claves</span>
+          <h2>Una versión más elegante y más corta.</h2>
+          <p>
+            La idea es decir menos, pero que cada bloque empuje a la reserva.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="offer">
+            <h3>Show claro</h3>
+            <p>Entrás y entendés rápido qué hace la banda, para qué eventos sirve y cómo reservar.</p>
+          </article>
+          <article class="offer">
+            <h3>Visual fuerte</h3>
+            <p>Menos relleno, más presencia de marca, más aire y mejor lectura desde celular.</p>
+          </article>
+          <article class="offer">
+            <h3>Cierre rápido</h3>
+            <p>La consulta arranca por WhatsApp sin desviar al usuario con explicaciones innecesarias.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card section" id="muestra-video">
+        <div class="section-head">
+          <span class="eyebrow">Video</span>
+          <h2>El video sube al frente.</h2>
+          <p>
+            En esta propuesta el reel toma más protagonismo para vender el clima del show apenas entran a la web.
+          </p>
+        </div>
+
+        <div class="video-shell">
+          <article class="video-frame">
+            <span>Casamientos</span>
+            <strong>Entrada fina y pista explotando</strong>
+            <p>Un bloque visual más grande para que el show se entienda rápido.</p>
+          </article>
+
+          <article class="quote-box">
+            <strong>Copy más corto</strong>
+            <p>
+              El resto del contenido acompaña, pero no compite con el video, el paquete ni la reserva.
+            </p>
+            <div class="actions">
+              <a class="button button-primary" data-whatsapp-link href="#">Pedir presupuesto</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div>
+          <strong>Esto es solo una muestra.</strong>
+          <p>No cambia tu web actual hasta que vos me digas que avancemos con este estilo.</p>
+        </div>
+
+        <a class="button button-primary" data-whatsapp-link href="#">Me gusta esta línea</a>
+      </section>
+    </div>
+
+    <script>
+      (() => {
+        const config = window.siteConfig || {};
+        const brand = config.brand || "La Misma Nota";
+        const whatsapp = config.contact?.whatsapp || "";
+        const message = `Hola ${brand}, vi la muestra alternativa y quiero avanzar con esa línea.`;
+
+        document.querySelectorAll("[data-brand-name]").forEach((node) => {
+          node.textContent = brand;
+        });
+
+        document.querySelectorAll("[data-whatsapp-link]").forEach((node) => {
+          node.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`;
+          node.target = "_blank";
+          node.rel = "noreferrer";
+        });
+      })();
+    </script>
+  </body>
+</html>
