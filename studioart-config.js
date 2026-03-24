@@ -3,7 +3,7 @@ const studioArtConfig = {
   tagline: "Produccion musical, canciones a medida y audio para marcas",
   homeHref: "index.html",
   logo: {
-    src: "assets/tng-logo-master-2048.png?v=20260324-3",
+    src: "assets/tng-logo-master-2048.png?v=20260324-4",
     alt: "Logo neon de TNG Music StudioART",
   },
   contact: {
@@ -122,7 +122,7 @@ const studioArtConfig = {
     lead:
       "Las propuestas mas fuertes del estudio aparecen primero. Abajo quedan las opciones puntuales para quienes necesitan avanzar por etapa o resolver algo especifico.",
     note:
-      "Mezcla y mastering forman parte del recorrido en producciones completas y estan confirmados dentro de la linea Integral. Si queres resolver solo esa etapa, se cotiza segun material.",
+      "Contamos con equipo profesional para un resultado de alta calidad. Si tu proyecto necesita combinar servicios, lo ordenamos en una propuesta clara y a medida.",
     items: [
       {
         featured: true,
@@ -179,6 +179,74 @@ const studioArtConfig = {
       },
       {
         featured: false,
+        tag: "Cupos limitados",
+        title: "Pack Redes",
+        description:
+          "Grabacion completa de tu cancion desde cero + video reel de 15 a 30 segundos para que salgas con una pieza lista para mostrar y mover en redes.",
+        bullets: [
+          "Pensado para visibilidad rapida y contenido con mejor presentacion.",
+          "Ideal para artistas que necesitan audio + pieza corta para difundir.",
+        ],
+        price: "$110.000",
+        cta: {
+          label: "Consultar Pack Redes",
+          whatsappMessage:
+            "Hola TNG Music StudioART, quiero consultar por el Pack Redes.",
+        },
+      },
+      {
+        featured: false,
+        tag: "Mixing",
+        title: "Mezclar tu cancion",
+        description:
+          "Mezclamos tu tema para ordenar mejor voces, instrumental, espacio y presencia general del resultado.",
+        bullets: [
+          "Ideal si ya tenes la grabacion resuelta y queres subir el nivel final.",
+          "Enfocado en claridad, balance e impacto.",
+        ],
+        price: "$50.000",
+        cta: {
+          label: "Consultar mixing",
+          whatsappMessage:
+            "Hola TNG Music StudioART, quiero consultar por el servicio de mixing.",
+        },
+      },
+      {
+        featured: false,
+        tag: "Mastering",
+        title: "Mastering por cancion",
+        description:
+          "Mastering final para canciones que traigas ya mezcladas y necesiten un cierre prolijo antes de salir.",
+        bullets: [
+          "Pensado para material que ya esta avanzado.",
+          "Ayuda a presentar mejor el tema en su instancia final.",
+        ],
+        price: "$80.000",
+        cta: {
+          label: "Consultar mastering",
+          whatsappMessage:
+            "Hola TNG Music StudioART, quiero consultar por mastering de una cancion.",
+        },
+      },
+      {
+        featured: false,
+        tag: "Voces",
+        title: "Afinacion de voces por cancion",
+        description:
+          "Correccion y afinacion vocal por cancion para mejorar la presentacion final sin perder naturalidad.",
+        bullets: [
+          "Ideal para proyectos que ya tienen toma grabada.",
+          "Pensado para que la voz se sostenga mejor en el resultado final.",
+        ],
+        price: "$50.000",
+        cta: {
+          label: "Consultar afinacion de voces",
+          whatsappMessage:
+            "Hola TNG Music StudioART, quiero consultar por afinacion de voces por cancion.",
+        },
+      },
+      {
+        featured: false,
         tag: "Promo 2 hs",
         title: "Grabacion sobre beat propio",
         description:
@@ -211,23 +279,6 @@ const studioArtConfig = {
             "Hola TNG Music StudioART, quiero consultar por una sesion de grabacion.",
         },
       },
-      {
-        featured: false,
-        tag: "Consultar",
-        title: "Mezcla y mastering",
-        description:
-          "Etapa final para ordenar, pulir y presentar mejor el material cuando el proyecto ya esta grabado o necesita cierre.",
-        bullets: [
-          "Se cotiza segun cantidad de material y estado del proyecto.",
-          "Parte confirmada de la linea Integral.",
-        ],
-        price: "Presupuesto a medida",
-        cta: {
-          label: "Consultar mezcla y mastering",
-          whatsappMessage:
-            "Hola TNG Music StudioART, quiero consultar por mezcla y mastering.",
-        },
-      },
     ],
   },
   packagesSection: {
@@ -236,7 +287,7 @@ const studioArtConfig = {
     lead:
       "Dos lineas para elegir segun alcance. Esencial para avanzar por proyecto con una estructura agil. Integral para cerrar el material con proceso completo.",
     note:
-      "La linea Integral incluye todo el proceso, con mezcla y mastering final. En la linea Esencial conviene aclarar alcance segun proyecto.",
+      "EP Esencial incluye mezcla y mastering. La linea Integral tambien incluye el proceso completo con mezcla y mastering final.",
     items: [
       {
         featured: false,
@@ -244,26 +295,13 @@ const studioArtConfig = {
         title: "EP Esencial",
         songs: "4 canciones",
         description:
-          "Para proyectos que quieren avanzar varias canciones con una estructura mas agil y mejor valor por proyecto.",
+          "Para proyectos que quieren avanzar varias canciones con una estructura mas agil, y cerrar ese EP con mezcla y mastering incluidos.",
         price: "$340.000",
+        badge: "Incluye mezcla + mastering",
         cta: {
           label: "Consultar EP Esencial",
           whatsappMessage:
             "Hola TNG Music StudioART, quiero consultar por el paquete EP Esencial.",
-        },
-      },
-      {
-        featured: false,
-        tier: "Esencial",
-        title: "LP Esencial",
-        songs: "10 canciones",
-        description:
-          "Pensado para lanzamientos mas amplios donde conviene ordenar el trabajo por bloque y no por tema suelto.",
-        price: "$800.000",
-        cta: {
-          label: "Consultar LP Esencial",
-          whatsappMessage:
-            "Hola TNG Music StudioART, quiero consultar por el paquete LP Esencial.",
         },
       },
       {
@@ -355,12 +393,12 @@ const studioArtConfig = {
         text: "No nos quedamos en lo tecnico: buscamos que cada proyecto tenga intencion, forma y mejor lectura artistica.",
       },
       {
-        title: "Podemos arrancar desde cero",
-        text: "Idea, letra, recuerdo, maqueta o concepto. Hay trabajo real desde el punto de partida que tengas.",
+        title: "Equipo profesional",
+        text: "Contamos con equipo profesional para lograr un resultado de alta calidad, con mejor registro, control y presentacion final.",
       },
       {
-        title: "Oferta clara y escalable",
-        text: "Podes entrar por una sesion puntual o avanzar a una produccion mas completa sin perder orden.",
+        title: "Desde cero o por etapa",
+        text: "Idea, letra, recuerdo, maqueta o proyecto avanzado. Podemos entrar desde el punto real en el que estas.",
       },
       {
         title: "Resultado pensado para usarse",
