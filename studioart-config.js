@@ -3,11 +3,28 @@ const studioArtConfig = {
   tagline: "Produccion musical, canciones a medida y audio para marcas",
   homeHref: "index.html",
   logo: {
-    src: "assets/tng-logo-master-2048.png?v=20260324-4",
+    src: "assets/tng-logo-master-2048.png?v=20260324-5",
     alt: "Logo neon de TNG Music StudioART",
   },
   contact: {
     whatsapp: "5491154752924",
+    socials: [
+      {
+        platform: "Instagram",
+        handle: "@tng.music.studioart",
+        href: "https://instagram.com/tng.music.studioart",
+      },
+      {
+        platform: "TikTok",
+        handle: "@tng.music.studioart",
+        href: "https://tiktok.com/@tng.music.studioart",
+      },
+      {
+        platform: "YouTube",
+        handle: "@TNG.Music.StudioArt",
+        href: "https://youtube.com/@TNG.Music.StudioArt",
+      },
+    ],
   },
   seo: {
     title: "TNG Music StudioART | Produccion musical, canciones a medida y audio para marcas",
@@ -448,6 +465,8 @@ const studioArtConfig = {
     panelText:
       "Con una idea breve ya podemos orientarte. Decinos si es cancion propia, cancion a medida o proyecto para marca, y en que etapa estas.",
     checklist: ["Tipo de proyecto", "Idea o referencia", "Necesidad principal", "Fecha objetivo"],
+    socialsLead:
+      "Mientras sumamos audios y videos, tambien podes seguir el movimiento del estudio en estas redes.",
   },
   footer: {
     copy:

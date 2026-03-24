@@ -58,6 +58,33 @@ const renderChips = (selector, items) => {
   });
 };
 
+const renderSocialLinks = (selector, items, className) => {
+  const container = document.querySelector(selector);
+  if (!container) return;
+
+  container.innerHTML = "";
+  items.forEach((item) => {
+    if (!item?.href) return;
+
+    const link = document.createElement("a");
+    link.className = className;
+    link.href = item.href;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+
+    const platform = document.createElement("span");
+    platform.className = `${className}__platform`;
+    platform.textContent = item.platform || "Canal";
+
+    const handle = document.createElement("strong");
+    handle.className = `${className}__handle`;
+    handle.textContent = item.handle || item.href;
+
+    link.append(platform, handle);
+    container.append(link);
+  });
+};
+
 const renderNavigation = () => {
   const links = document.querySelectorAll(".studio-nav a");
   links.forEach((link, index) => {
@@ -375,6 +402,8 @@ const applyContent = () => {
   setText("#contact-panel-title", STUDIO_CONFIG.contactSection?.panelTitle);
   setText("#contact-panel-text", STUDIO_CONFIG.contactSection?.panelText);
   renderChips("#contact-checklist", STUDIO_CONFIG.contactSection?.checklist || []);
+  setText("#contact-socials-lead", STUDIO_CONFIG.contactSection?.socialsLead);
+  renderSocialLinks("#contact-social-links", STUDIO_CONFIG.contact?.socials || [], "social-link");
   applyCta("#closing-primary-cta", STUDIO_CONFIG.buttons?.closingPrimary);
   applyCta("#closing-secondary-link", STUDIO_CONFIG.buttons?.closingSecondary);
 
@@ -382,6 +411,7 @@ const applyContent = () => {
   setText("#footer-home-link", STUDIO_CONFIG.footer?.homeLabel);
   document.querySelector("#footer-home-link")?.setAttribute("href", STUDIO_CONFIG.homeHref || "index.html");
   applyCta("#footer-whatsapp-link", STUDIO_CONFIG.buttons?.footerWhatsapp);
+  renderSocialLinks("#footer-social-links", STUDIO_CONFIG.contact?.socials || [], "footer-social-link");
 };
 
 const applyWhatsAppLinks = () => {
