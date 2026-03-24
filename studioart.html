@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" content="#050406" />
+    <meta id="meta-description" name="description" content="TNG Music StudioART" />
+    <meta id="meta-og-title" property="og:title" content="TNG Music StudioART" />
+    <meta id="meta-og-description" property="og:description" content="Produccion musical, canciones a medida y audio para marcas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta id="meta-twitter-title" name="twitter:title" content="TNG Music StudioART" />
+    <meta id="meta-twitter-description" name="twitter:description" content="Consultas por WhatsApp." />
+    <title>TNG Music StudioART</title>
+    <link rel="icon" href="assets/tng-logo-master-2048.png?v=20260324-3" type="image/png" />
+    <link rel="preload" href="assets/tng-logo-master-2048.png?v=20260324-3" as="image" type="image/png" fetchpriority="high" />
+    <link rel="stylesheet" href="studioart.css?v=20260324-3" />
+    <script src="studioart-config.js?v=20260324-3"></script>
+    <script>
+      (() => {
+        const config = window.studioArtConfig;
+        if (!config) return;
+
+        const setMeta = (id, value) => {
+          const element = document.getElementById(id);
+          if (element && value) {
+            element.setAttribute("content", value);
+          }
+        };
+
+        document.title = config.seo?.title || config.brand || document.title;
+        setMeta("meta-description", config.seo?.description);
+        setMeta("meta-og-title", config.seo?.ogTitle);
+        setMeta("meta-og-description", config.seo?.ogDescription);
+        setMeta("meta-twitter-title", config.seo?.twitterTitle);
+        setMeta("meta-twitter-description", config.seo?.twitterDescription);
+      })();
+    </script>
+    <script src="studioart.js?v=20260324-3" defer></script>
+  </head>
+  <body>
+    <div class="grid-veil" aria-hidden="true"></div>
+    <div class="aura aura--pink" aria-hidden="true"></div>
+    <div class="aura aura--cyan" aria-hidden="true"></div>
+    <div class="aura aura--green" aria-hidden="true"></div>
+
+    <header class="studio-header">
+      <a class="brand-lockup" href="index.html" aria-label="Volver al sitio principal">
+        <span class="brand-token" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong data-brand-name>TNG Music StudioART</strong>
+          <span id="header-tagline">Produccion musical, canciones a medida y audio para marcas</span>
+        </span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="studio-nav-shell"
+        aria-label="Abrir navegacion"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-shell" id="studio-nav-shell">
+        <nav class="studio-nav" aria-label="Navegacion de StudioART">
+          <a href="#servicios"></a>
+          <a href="#paquetes"></a>
+          <a href="#marcas"></a>
+          <a href="#proceso"></a>
+          <a href="#faq"></a>
+          <a href="#contacto"></a>
+        </nav>
+
+        <a class="button button--ghost button--compact" id="header-home-link" href="index.html"></a>
+        <a class="button button--primary button--compact" id="header-cta" href="" data-whatsapp-link></a>
+      </div>
+    </header>
+
+    <main class="studio-page">
+      <section class="hero section" id="inicio">
+        <div class="hero-copy" data-reveal>
+          <span class="eyebrow" id="hero-eyebrow"></span>
+          <h1 id="hero-title"></h1>
+          <p class="lead" id="hero-lead"></p>
+
+          <div class="hero-actions">
+            <a class="button button--primary" id="hero-primary-cta" href="" data-whatsapp-link></a>
+            <a class="button button--ghost" id="hero-secondary-cta" href=""></a>
+          </div>
+
+          <div class="hero-pills" id="hero-service-pills" aria-label="Tipos de proyecto"></div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <article class="sign-stage">
+            <div class="sign-stage__glow" aria-hidden="true"></div>
+            <img
+              id="hero-logo"
+              class="hero-logo"
+              src="assets/tng-logo-master-2048.png?v=20260324-3"
+              alt="Logo neon de TNG Music StudioART"
+              width="2048"
+              height="2048"
+              fetchpriority="high"
+              decoding="async"
+            />
+            <div class="sign-base">
+              <span id="hero-sign-tag"></span>
+              <strong id="hero-sign-subtitle"></strong>
+            </div>
+          </article>
+
+          <div class="signal-stack" id="hero-signal-stack"></div>
+        </div>
+      </section>
+
+      <section class="section section--compact" id="proyectos">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow" id="paths-eyebrow"></span>
+          <h2 id="paths-title"></h2>
+          <p class="lead" id="paths-lead"></p>
+        </div>
+
+        <div class="paths-grid" id="paths-grid"></div>
+
+        <div class="inline-cta" data-reveal>
+          <a class="button button--primary" id="paths-primary-cta" href="" data-whatsapp-link></a>
+        </div>
+      </section>
+
+      <section class="section" id="servicios">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow" id="services-eyebrow"></span>
+          <h2 id="services-title"></h2>
+          <p class="lead" id="services-lead"></p>
+        </div>
+
+        <div class="services-grid" id="services-grid"></div>
+        <p class="section-note" id="services-note" data-reveal></p>
+      </section>
+
+      <section class="section section--band" id="paquetes">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow" id="packages-eyebrow"></span>
+          <h2 id="packages-title"></h2>
+          <p class="lead" id="packages-lead"></p>
+        </div>
+
+        <div class="packages-grid" id="packages-grid"></div>
+        <p class="section-note" id="packages-note" data-reveal></p>
+      </section>
+
+      <section class="section" id="marcas">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow" id="brands-eyebrow"></span>
+          <h2 id="brands-title"></h2>
+          <p class="lead" id="brands-lead"></p>
+        </div>
+
+        <div class="brands-grid" id="brands-grid"></div>
+
+        <article class="brand-callout" data-reveal>
+          <div>
+            <span class="contact-label">Presupuesto a medida</span>
+            <h3 id="brands-callout-title"></h3>
+            <p id="brands-callout-text"></p>
+          </div>
+          <a class="button button--primary button--wide" id="brands-primary-cta" href="" data-whatsapp-link></a>
+        </article>
+      </section>
+
+      <section class="section" id="proceso">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow" id="process-eyebrow"></span>
+          <h2 id="process-title"></h2>
+          <p class="lead" id="process-lead"></p>
+        </div>
+
+        <div class="process-grid" id="process-grid"></div>
+      </section>
+
+      <section class="section" id="diferenciales">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow" id="highlights-eyebrow"></span>
+          <h2 id="highlights-title"></h2>
+          <p class="lead" id="highlights-lead"></p>
+        </div>
+
+        <div class="highlights-grid" id="highlights-grid"></div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow" id="faq-eyebrow"></span>
+          <h2 id="faq-title"></h2>
+          <p class="lead" id="faq-lead"></p>
+        </div>
+
+        <div class="faq-list" id="faq-list"></div>
+      </section>
+
+      <section class="section" id="contacto">
+        <div class="section-heading" data-reveal>
+          <span class="eyebrow" id="contact-eyebrow"></span>
+          <h2 id="contact-title"></h2>
+          <p class="lead" id="contact-lead"></p>
+        </div>
+
+        <article class="contact-panel" data-reveal>
+          <div class="contact-copy">
+            <span class="contact-label">Entrada rapida</span>
+            <h3 id="contact-panel-title"></h3>
+            <p id="contact-panel-text"></p>
+            <div class="contact-chip-row" id="contact-checklist" aria-label="Que conviene mandar"></div>
+          </div>
+
+          <div class="contact-actions">
+            <a class="button button--primary button--wide" id="closing-primary-cta" href="" data-whatsapp-link></a>
+            <a class="button button--ghost button--wide" id="closing-secondary-link" href="index.html"></a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="studio-footer">
+      <div>
+        <strong data-brand-name>TNG Music StudioART</strong>
+        <p id="footer-copy"></p>
+      </div>
+
+      <div class="footer-actions">
+        <a id="footer-home-link" href="index.html"></a>
+        <a id="footer-whatsapp-link" href="" data-whatsapp-link></a>
+      </div>
+    </footer>
+  </body>
+</html>

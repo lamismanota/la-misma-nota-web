@@ -17,6 +17,10 @@ STATIC_FILES = [
     "script.js",
     "admin.js",
     "site-config.js",
+    "studioart.css",
+    "studioart.js",
+    "studioart-config.js",
+    "studioart.html",
     "muestra-minimal.html",
 ]
 
