@@ -5,9 +5,9 @@ Este directorio existe para publicar `TNG Music StudioART` como un sitio separad
 ### Configuracion recomendada en Netlify
 
 - Repositorio: `lamismanota/la-misma-nota-web`
-- Package directory: `sites/studioart`
-- Build command: `python3 sites/studioart/build.py`
-- Publish directory: `sites/studioart/dist`
+- Base directory: `sites/studioart`
+- Build command: `python3 build.py`
+- Publish directory: `dist`
 
 ### Resultado
 

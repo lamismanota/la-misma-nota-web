@@ -1,6 +1,9 @@
 [build]
-  command = "python3 sites/studioart/build.py"
-  publish = "sites/studioart/dist"
+  command = "python3 build.py"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
 
 [[headers]]
   for = "/*"
