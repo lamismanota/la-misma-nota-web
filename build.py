@@ -17,10 +17,6 @@ STATIC_FILES = [
     "script.js",
     "admin.js",
     "site-config.js",
-    "studioart.css",
-    "studioart.js",
-    "studioart-config.js",
-    "studioart.html",
     "muestra-minimal.html",
 ]
 
@@ -681,12 +677,8 @@ def build_dist() -> None:
 
     index_source = (ROOT / "index.html").read_text(encoding="utf-8")
     admin_source = (ROOT / "admin.html").read_text(encoding="utf-8")
-    studioart_source = (ROOT / "studioart.html").read_text(encoding="utf-8")
-
     (DIST / "index.html").write_text(render_index(index_source, config), encoding="utf-8")
     (DIST / "admin.html").write_text(render_admin(admin_source, config), encoding="utf-8")
-    (DIST / "studioart").mkdir(parents=True, exist_ok=True)
-    (DIST / "studioart" / "index.html").write_text(studioart_source, encoding="utf-8")
 
 
 if __name__ == "__main__":

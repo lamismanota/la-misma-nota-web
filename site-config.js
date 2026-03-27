@@ -44,7 +44,6 @@ const siteConfig = {
     { label: "Formatos", href: "#formatos" },
     { label: "Paquetes", href: "#paquetes" },
     { label: "Videos", href: "#videos" },
-    { label: "StudioART", href: "/studioart/" },
     { label: "Testimonios", href: "#testimonios" },
     { label: "FAQ", href: "#faq" },
     { label: "Cotizador", href: "#consulta" },
